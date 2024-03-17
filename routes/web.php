@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DrinksController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,3 +43,9 @@ Route::get('/variables', function () {
 Route::get('/json', function () {
     return ['name' => 'norhane ' , 'price' => '400$'];
 });
+
+
+
+/* The original route */ 
+Route::get('/drinks',[DrinksController::class, 'index']);
+Route::get('/drinks/{id}',[DrinksController::class, 'show']);
