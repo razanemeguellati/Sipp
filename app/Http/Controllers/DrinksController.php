@@ -20,10 +20,14 @@ class DrinksController extends Controller
     }
 
     public function show($id){
-        return view('details' , ['id'=> $id]);
+        $drink = Drink::findOrFail($id);
+        // findorfail for the 404 error page, find is default one 
+        //$drink = Drink::find($id);
+        return view('details' , ['drink'=> $drink]);
     }  
 
     public function create(){
-        return view('details' );
+        return view('create');
     } 
+
 }

@@ -48,5 +48,5 @@ Route::get('/json', function () {
 
 /* The original route */ 
 Route::get('/drinks',[DrinksController::class, 'index']);
-Route::get('/drinks/{id}',[DrinksController::class, 'show']);
 Route::get('/drinks/create',[DrinksController::class, 'create']);
+Route::get('/drinks/{id}',[DrinksController::class, 'show']);

@@ -18,3 +18,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/* we can return json by returning an array and laravel will convert into json file  */
+Route::get('/json', function () {
+    return ['name' => 'norhane ' , 'price' => '400$'];
+});
