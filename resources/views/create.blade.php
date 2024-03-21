@@ -10,18 +10,26 @@
 
     <label for="type">Choose a type:</label>
     <select name="type" id="type">
-      <option value="margarita">Tropical</option>
-      <option value="hawaiian">Dziri</option>
-      <option value="veg supreme">Kabyle</option>
+      <option value="Tropical">Tropical</option>
+      <option value="Dziri">Dziri</option>
+      <option value="Kabyle">Kabyle</option>
     </select>
     
     <label for="base">Choose a base:</label>
     <select name="base" id="base">
-      <option value="thin & crispy">milk</option>
-      <option value="cheese crust">coffee</option>
-      <option value="garlic crust">olive oil</option>
+      <option value="milk">milk</option>
+      <option value="coffee">coffee</option>
+      <option value="olive oil">olive oil</option>
     </select>
-    <input type="submit" value="Order Pizza">
+
+    <fieldset>
+      <label>Extra toppings:</label>
+      <input type="checkbox" name="toppings[]" value="sirup">sirup<br />
+      <input type="checkbox" name="toppings[]" value="strawberries">strawberries<br />
+      <input type="checkbox" name="toppings[]" value="bananas">bananas<br />
+    </fieldset>
+
+    <input type="submit" value="Order Drink">
   </form>
 </div>
 @endsection

@@ -32,8 +32,21 @@ class DrinksController extends Controller
 
     public function store(){
       
-        error_log(request('name'));
-        return redirect('/');
+       // error_log(request('name'));
+        $drink = new Drink() ; 
+        $drink->name= request('name');
+        $drink->type= request('type');
+        $drink->base= request('base');
+        $drink->price= 11; 
+        $drink->promo= 11;
+        $drink->toppings= request('toppings');
+        error_log($drink);
+        //saving the drink in the database
+        $drink->save();
+
+        //because redirect is not like the view that has 2 arguments. 
+        // we use the with method to send data     
+        return redirect('/')->with('msg','thanks for your order');
     } 
 
 }

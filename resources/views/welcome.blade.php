@@ -8,6 +8,7 @@
                 Esi's Best Drinks
             </div>
             <a href="/drinks/create"> Order a drink </a>
+           <p> {{session('msg')}}</p> 
         </div>
  
 </div>

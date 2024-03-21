@@ -9,6 +9,14 @@
             <p> drink type: {{$drink['type']}}</p>
             <p> drink price: {{$drink-> price }}$</p>
          </div>
+
+         <p class="toppings">Extra toppings:</p>
+                <ul>
+                @foreach($drink->toppings as $topping)
+                <li>{{ $topping }}</li>
+                @endforeach
+                </ul>
+
               <a href="/drinks"> < Back to all drinks </a>
         </div>
  
