@@ -49,4 +49,11 @@ class DrinksController extends Controller
         return redirect('/')->with('msg','thanks for your order');
     } 
 
+    
+    public function destroy($id){
+      $drink = Drink::findOrFail($id);
+      $drink->delete();
+      return redirect('/drinks');
+    } 
+
 }

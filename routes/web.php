@@ -50,3 +50,4 @@ Route::get('/drinks/{id}',[DrinksController::class, 'show']);
 Route::post('/drinks',[DrinksController::class, 'store']);
 //we use /drinks for the post request instead of /drinks/create because 
 //we're creating the drink ressource itself
+Route::delete('/drinks/{id}',[DrinksController::class, 'destroy']);
