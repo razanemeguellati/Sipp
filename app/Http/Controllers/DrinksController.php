@@ -30,4 +30,10 @@ class DrinksController extends Controller
         return view('create');
     } 
 
+    public function store(){
+      
+        error_log(request('name'));
+        return redirect('/');
+    } 
+
 }

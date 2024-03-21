@@ -13,13 +13,6 @@ use App\Http\Controllers\DrinksController;
 |
 */
 
-
-/* The original route */ 
-Route::get('/', function () {
-    return view('welcome');
-});
- 
-
 /* either pass views only or pass arguments with the view  */
 Route::get('/loops', function () {
     $array = [
@@ -45,8 +38,15 @@ Route::get('/json', function () {
 });
 
 
-
 /* The original route */ 
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
 Route::get('/drinks',[DrinksController::class, 'index']);
 Route::get('/drinks/create',[DrinksController::class, 'create']);
 Route::get('/drinks/{id}',[DrinksController::class, 'show']);
+Route::post('/drinks',[DrinksController::class, 'store']);
+//we use /drinks for the post request instead of /drinks/create because 
+//we're creating the drink ressource itself
