@@ -5,7 +5,7 @@
   <h1>Create a New Drink</h1>
   <form action="/drinks" method="POST">
     @csrf
-    <label for="name">Your name:</label>
+    <label for="name">What'sYour name:</label>
     <input type="text" name="name" id="name" required>
 
     <label for="type">Choose a type:</label>
