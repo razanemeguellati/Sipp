@@ -7,7 +7,7 @@
             <div class="title m-b-md">
                 Esi's Best Drinks
             </div>
-            <a href="/drinks/create"> Order a drink </a>
+            <a href="/drinks/create"> Order a drinkk </a>
            <p> {{session('msg')}}</p> 
         </div>
  
